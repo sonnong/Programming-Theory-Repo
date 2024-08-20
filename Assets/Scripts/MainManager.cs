@@ -9,14 +9,22 @@ public class MainManager : MonoBehaviour
 {
     public static MainManager Instance;
     public bool isGameActive;
+    public GameObject[] fighters;
     public int score = 0;
     public TextMeshProUGUI GameOverText, ScoreText, FinalScoreText;
-    public Button RestartButton, ExitButton;
+    public Button MenuButton, ExitButton;
     // Start is called before the first frame update
     void Start()
     {
         Instance = this;
         isGameActive = true;
+        foreach (GameObject fighter in fighters)
+        {
+            if (fighter.CompareTag(MenuUI.Instance.Fighter))
+            {
+                fighter.SetActive(true);
+            }
+        }
     }
 
     // Update is called once per frame
@@ -31,11 +39,11 @@ public class MainManager : MonoBehaviour
         FinalScoreText.text = "Your score: " + score;
         GameOverText.gameObject.SetActive(true);
         FinalScoreText.gameObject.SetActive(true);
-        RestartButton.gameObject.SetActive(true);
+        MenuButton.gameObject.SetActive(true);
         ExitButton.gameObject.SetActive(true);
     }
 
-    public void Restart()
+    public void ToMenu()
     {
         SceneManager.LoadScene(0);
     }
