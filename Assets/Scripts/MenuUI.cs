@@ -5,7 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class MenuUI : MonoBehaviour
 {
-    public static MenuUI Instance;
+    // ENCAPSULATION
+    public static MenuUI Instance { get; private set; }
     public string Fighter;
     // Start is called before the first frame update
     void Awake()

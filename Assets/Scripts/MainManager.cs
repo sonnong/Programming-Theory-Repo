@@ -13,6 +13,8 @@ public class MainManager : MonoBehaviour
     public int score = 0;
     public TextMeshProUGUI GameOverText, ScoreText, FinalScoreText;
     public Button MenuButton, ExitButton;
+    public AudioSource SoundEffect;
+    public AudioClip ExplosionSound, MissileSound, PowerupSound;
     // Start is called before the first frame update
     void Start()
     {

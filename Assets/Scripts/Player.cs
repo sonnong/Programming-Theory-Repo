@@ -4,9 +4,11 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    private float speed = 10, coolDown = 1;
+    private float speed = 10f;
+    public float coolDown = 1f;
     private float xBound = 3.75f, topBound = 6.72f, bottomBound = -6.42f;
     public GameObject laser;
+    public AudioSource LaserSound;
 
     // Start is called before the first frame update
     void Start()
@@ -19,7 +21,9 @@ public class Player : MonoBehaviour
     {
         if (MainManager.Instance.isGameActive)
         {
+            // ABSTRACTION
             MovePlayer();
+            Debug.Log(coolDown);
         }
 
     }
@@ -58,6 +62,7 @@ public class Player : MonoBehaviour
             if (projectile != null)
             {
                 projectile.SetActive(true);
+                LaserSound.Play();
                 projectile.transform.SetPositionAndRotation(transform.position, Quaternion.Euler(0, 90, 0));
                 yield return new WaitForSeconds(coolDown);
             }

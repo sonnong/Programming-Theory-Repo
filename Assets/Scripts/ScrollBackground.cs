@@ -18,14 +18,10 @@ public class ScrollBackground : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (MainManager.Instance.isGameActive)
+        transform.Translate(Time.deltaTime * speed * Vector3.down);
+        if (transform.position.y < startPos.y - repeatHeight)
         {
-            transform.Translate(Time.deltaTime * speed * Vector3.down);
-            if (transform.position.y < startPos.y - repeatHeight)
-            {
-                transform.position = startPos;
-            }
+            transform.position = startPos;
         }
-
     }
 }

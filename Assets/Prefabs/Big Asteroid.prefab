@@ -260,11 +260,11 @@ GameObject:
   - component: {fileID: 1826950424996363076}
   - component: {fileID: 6799964443348713453}
   - component: {fileID: 7425613682737869299}
-  - component: {fileID: -7852239136329426598}
   - component: {fileID: -1487678613424892336}
+  - component: {fileID: -8049965497855548016}
   m_Layer: 0
   m_Name: Big Asteroid
-  m_TagString: Enemy
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -279,7 +279,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 0.21, y: 0, z: -2.6}
-  m_LocalScale: {x: 1.48, y: 1.48, z: 1.48}
+  m_LocalScale: {x: 0.7, y: 0.7, z: 0.7}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 9214935536983220330}
@@ -325,18 +325,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tumble: 0.25
---- !u!114 &-7852239136329426598
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7524059565532363342}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 356898f5416ecfb47be2a691e332a574, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!135 &-1487678613424892336
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -358,6 +346,23 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 0.8074933
   m_Center: {x: 0.008583552, y: -0.033123914, z: 0.018245306}
+--- !u!114 &-8049965497855548016
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7524059565532363342}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1a99a5eeee040e4f85041fd8b764a0e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 3
+  bottomBound: -9
+  Explosion: {fileID: 531123352903843151, guid: 3f5fcadc4114ac947b6d82a6918cf488, type: 3}
+  ExplosionSound: {fileID: 8300000, guid: dfb9d151c618e1a439e7dcf07f849deb, type: 3}
+  ChildAsteroids: {fileID: 926257921348488479, guid: 230fa1b0705955d49b8eac6440754695, type: 3}
 --- !u!1 &7652031150105479733
 GameObject:
   m_ObjectHideFlags: 0
