@@ -358,10 +358,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e1a99a5eeee040e4f85041fd8b764a0e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 3
-  bottomBound: -9
   Explosion: {fileID: 531123352903843151, guid: 3f5fcadc4114ac947b6d82a6918cf488, type: 3}
-  ExplosionSound: {fileID: 8300000, guid: dfb9d151c618e1a439e7dcf07f849deb, type: 3}
+  Powerup: {fileID: 4868447309066006161, guid: e8e5273823d52b74f9e5814b7f6945de, type: 3}
   ChildAsteroids: {fileID: 926257921348488479, guid: 230fa1b0705955d49b8eac6440754695, type: 3}
 --- !u!1 &7652031150105479733
 GameObject:

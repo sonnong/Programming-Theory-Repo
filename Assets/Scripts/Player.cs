@@ -23,7 +23,6 @@ public class Player : MonoBehaviour
         {
             // ABSTRACTION
             MovePlayer();
-            Debug.Log(coolDown);
         }
 
     }

@@ -8,6 +8,7 @@ public class MenuUI : MonoBehaviour
     // ENCAPSULATION
     public static MenuUI Instance { get; private set; }
     public string Fighter;
+    public GameObject TutorialWindow;
     // Start is called before the first frame update
     void Awake()
     {
@@ -40,5 +41,15 @@ public class MenuUI : MonoBehaviour
     {
         MenuUI.Instance.Fighter = "thug";
         SceneManager.LoadScene(1);
+    }
+
+    public void SeeTutorial()
+    {
+        TutorialWindow.SetActive(true);
+    }
+
+    public void CloseTutorial()
+    {
+        TutorialWindow.SetActive(false);
     }
 }

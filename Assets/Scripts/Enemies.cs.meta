@@ -5,6 +5,7 @@ MonoImporter:
   serializedVersion: 2
   defaultReferences:
   - Explosion: {fileID: 531123352903843151, guid: 3f5fcadc4114ac947b6d82a6918cf488, type: 3}
+  - Powerup: {fileID: 4868447309066006161, guid: e8e5273823d52b74f9e5814b7f6945de, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
