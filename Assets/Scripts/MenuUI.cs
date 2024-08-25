@@ -19,10 +19,9 @@ public class MenuUI : MonoBehaviour
         }
     }
 
-    // Update is called once per frame
-    void Update()
+    void Start()
     {
-        
+        Screen.SetResolution(Screen.height * 9 / 16, Screen.height, true);
     }
 
     public void PlayCorsair()
